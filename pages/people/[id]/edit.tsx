@@ -16,7 +16,7 @@ const FETCH_USER = gql`
   }
 `;
 
-const index = () => {
+const edit = () => {
   const router = useRouter();
   let userId = router.query.id;
   const { data, loading, error } = useQuery(FETCH_USER, {
@@ -28,9 +28,12 @@ const index = () => {
   return (
     <div className="flex flex-col mx-auto items-center justify-center md:max-w-5xl md:container md:justify-start md:items-start my-20">
       <Head>
-        <title>{`${user.firstName} ${user.lastName}`}</title>
+        <title>{`EDIT USER ${user.firstName} ${user.lastName}`}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      <div>
+        <h1 className="text-3xl font-semibold">EDIT USER</h1>
+      </div>
       <div className="flex items-center justify-center py-2 h-auto bg-gradient-to-tr from-orange-300 via-red-300 to-pink-300 max-w-sm rounded-lg">
         <Image
           src={user.image}
@@ -62,4 +65,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default edit;

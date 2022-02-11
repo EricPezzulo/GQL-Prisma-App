@@ -8,6 +8,7 @@ module.exports = {
       "pbs.twimg.com",
       "cdna.artstation.com",
       "static.wikia.nocookie.net",
+      "southpark.fandom.com",
     ],
   },
 };

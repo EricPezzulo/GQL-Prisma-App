@@ -8,7 +8,6 @@ const UserComponent = ({ image, firstName, lastName, email, id, role }) => {
       <Image
         src={image}
         alt={`${firstName}'s avatar picture`}
-        // layout="fixed"
         width={450}
         height={400}
         className="object-contain"
